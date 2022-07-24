@@ -5,7 +5,7 @@ This also includes a dockerfile which can be used to build docker image and push
 
 I have uploaded separate terraform code which will preconfigure DB for app in a pod and also will build/deploy application to separate pod.
 
-#### **Dependencies -**
+## **Dependencies -**
 
 This app will connect to a mysql database and following are default DB configs -
 
@@ -17,7 +17,7 @@ DB_PASSWORD=Test1234
 These values will be automatically overridden if these are set as ENV Variables.
 
 
-#### **Table structure  -**
+## **Table structure  -**
 
 The database should have a table names "person" with following columns :
 
@@ -35,7 +35,7 @@ mysql> SHOW COLUMNS from person;
 
 mysql>
 
-#### **Usage -**
+## **Usage -**
 
 This app supports below REST calls :
 
