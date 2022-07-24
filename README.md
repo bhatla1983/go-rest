@@ -23,14 +23,14 @@ The database should have a table names "person" with following columns :
 
 
 mysql> SHOW COLUMNS from person;
-+-----------+--------------+------+-----+---------+-------+
+
 | Field     | Type         | Null | Key | Default | Extra |
-+-----------+--------------+------+-----+---------+-------+
+|----------:|-------------:|-----:|----:|--------:|------:|
 | id        | int          | NO   | PRI | NULL    |       |
 | lastname  | varchar(255) | YES  |     | NULL    |       |
 | firstname | varchar(255) | YES  |     | NULL    |       |
 | city      | varchar(255) | YES  |     | NULL    |       |
-+-----------+--------------+------+-----+---------+-------+
+
 4 rows in set (0.00 sec)
 
 mysql>
@@ -45,21 +45,21 @@ GET - http://<host-name>:8090/get/{id} --- Get details of person with ID
 
 PUT - http://<host-name>:8090/update/{id} -- Update the details about person with ID, it expects payload as below
 
-{
-    "id": 1,
-    "lastname": "last",
-    "firstname": "first",
-    "city": "Toronto"
-}
+            {
+                "id": 1,
+                "lastname": "last",
+                "firstname": "first",
+                "city": "Toronto"
+            }
 
 POST - http://<host-name>:8090/create -- This will add entry to database and expects below payload 
 
-{
-    "id": 1,
-    "lastname": "last",
-    "firstname": "first",
-    "city": "Toronto"
-}
+        {
+            "id": 1,
+            "lastname": "last",
+            "firstname": "first",
+            "city": "Toronto"
+        }
 
 DELETE - http://<host-name>:8090/delete/{id} --- This will delete the record of person with ID.
 
